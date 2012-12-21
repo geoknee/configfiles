@@ -3,7 +3,7 @@
 call pathogen#infect()
 " colors
 syntax on
-autocmd FileType python colorscheme ir_black
+autocmd FileType python colorscheme solarized
 autocmd FileType ruby colorscheme jellybeans
 " numbering
 set relativenumber
@@ -14,3 +14,5 @@ let mapleader = ","
 nnoremap <leader>n :NERDTreeToggle<CR>
 inoremap jk <esc>
 inoremap <esc> <nop>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
