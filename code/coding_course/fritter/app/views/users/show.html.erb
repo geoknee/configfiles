@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Colour:</b>
+  <%= @user.colour %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%= @user.dob %>
+</p>
+<table>
+  <tr>
+    <th>Text</th>
+    <th>User</th>
+    <th>Publish date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user.frits.each do |frit| %>
+  <tr>
+    <td><%= frit.text %></td>
+    <td><%= frit.user_id %></td>
+    <td><%= frit.publish_date %></td>
+    <td><%= link_to 'Show', frit %></td>
+    <td><%= link_to 'Edit', edit_frit_path(frit) %></td>
+    <td><%= link_to 'Destroy', frit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

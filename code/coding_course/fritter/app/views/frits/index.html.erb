@@ -1,0 +1,27 @@
+<h1>Listing frits</h1>
+
+<table>
+  <tr>
+    <th>Text</th>
+    <th>User</th>
+    <th>Publish date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @frits.each do |frit| %>
+  <tr>
+    <td><%= frit.text %></td>
+	<td><%= frit.user_id %></td>
+    <td><%= frit.publish_date %></td>
+    <td><%= link_to 'Show', frit %></td>
+    <td><%= link_to 'Edit', edit_frit_path(frit) %></td>
+    <td><%= link_to 'Destroy', frit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Frit', new_frit_path %>

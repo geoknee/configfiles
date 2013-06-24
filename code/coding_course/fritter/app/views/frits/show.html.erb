@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Text:</b>
+  <%= @frit.text %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @frit.user_id %>
+</p>
+
+<p>
+  <b>Publish date:</b>
+  <%= @frit.publish_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_frit_path(@frit) %> |
+<%= link_to 'Back', frits_path %>
